@@ -4,7 +4,6 @@ import { recipes, Recipe } from '@/data/recipes';
 import RecipeCard from '@/components/RecipeCard';
 import RecipeModal from '@/components/RecipeModal';
 import FilterSidebar from '@/components/FilterSidebar';
-import Header from '@/components/Header';
 
 export default function Home() {
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
@@ -47,8 +46,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
       <div className="flex gap-6 container py-8">
         {/* Main Content */}
         <div className="flex-1">

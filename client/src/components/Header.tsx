@@ -2,11 +2,15 @@
 import { useState } from 'react';
 import { Menu, X, Download, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLocation } from 'wouter';
 import ShoppingListModal from './ShoppingListModal';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isShoppingListOpen, setIsShoppingListOpen] = useState(false);
+  const [location, setLocation] = useLocation();
+  const isBreakfastPage = location === '/';
+  const isBreadPage = location === '/bread';
 
   return (
     <>
@@ -19,12 +23,32 @@ export default function Header() {
               <h1 className="text-2xl font-bold text-primary" style={{ fontFamily: 'Playfair Display' }}>
                 PERIBAL
               </h1>
-              <p className="text-xs text-muted-foreground">Frühstücksrezepte</p>
+              <p className="text-xs text-muted-foreground">
+                {isBreakfastPage ? 'Frühstücksrezepte' : 'Brot & Backwaren'}
+              </p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4">
+            {/* Recipe Type Tabs */}
+            <div className="flex gap-2 border-r border-border pr-4">
+              <Button
+                variant={isBreakfastPage ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setLocation('/')}
+              >
+                🍳 Frühstück
+              </Button>
+              <Button
+                variant={isBreadPage ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setLocation('/bread')}
+              >
+                🍞 Brot & Backwaren
+              </Button>
+            </div>
+
             <Button
               variant="outline"
               size="sm"
@@ -72,6 +96,31 @@ export default function Header() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden border-t border-muted bg-background p-4 space-y-3">
+            {/* Recipe Type Tabs */}
+            <div className="flex gap-2 mb-3 pb-3 border-b border-muted">
+              <Button
+                variant={isBreakfastPage ? 'default' : 'outline'}
+                size="sm"
+                className="flex-1"
+                onClick={() => {
+                  setLocation('/');
+                  setIsMenuOpen(false);
+                }}
+              >
+                🍳 Frühstück
+              </Button>
+              <Button
+                variant={isBreadPage ? 'default' : 'outline'}
+                size="sm"
+                className="flex-1"
+                onClick={() => {
+                  setLocation('/bread');
+                  setIsMenuOpen(false);
+                }}
+              >
+                🍞 Brot
+              </Button>
+            </div>
             <Button
               variant="outline"
               className="w-full justify-start gap-2"
