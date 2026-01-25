@@ -254,7 +254,7 @@ export const breadRecipes: BreadRecipe[] = [
     type: 'vegetarian',
     prepTime: 30,
     servings: 6,
-    image: '/images/6_5FyKTJA9PoVsMSl9sB1gZ_1769335492401_na1fn_L2hvbWUvdWJ1bnR1L3N1ZXNza2FydG9mZmVsX3Byb3RlaW5fYnJvZXRjaGVu.png',
+    image: '/images/bread_susskartoffel_broetchen.png',
     ingredients: [
       { amount: '200g', name: 'Süßkartoffel (gekocht, püriert)' },
       { amount: '3', name: 'Eier' },
