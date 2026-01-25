@@ -1,9 +1,9 @@
 
 import { useState, useMemo } from 'react';
 import { breadRecipes, BreadRecipe } from '@/data/bread-recipes';
-import RecipeCard from '@/components/RecipeCard';
-import RecipeModal from '@/components/RecipeModal';
 import BreadFilterSidebar from '@/components/BreadFilterSidebar';
+import { Heart, X, Printer, Copy, Check } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export default function Bread() {
   const [selectedRecipe, setSelectedRecipe] = useState<BreadRecipe | null>(null);
@@ -106,16 +106,14 @@ function BreadRecipeCard({
   onFavoriteToggle: () => void;
   onClick: () => void;
 }) {
-  const { Heart } = require('lucide-react');
-
-  const categoryLabel = {
+  const categoryLabel: Record<string, string> = {
     bread: '🍞 Brot',
     rolls: '🥐 Brötchen',
     flatbread: '🫓 Fladenbrot',
     pancakes: '🥞 Pancakes',
   };
 
-  const typeLabel = {
+  const typeLabel: Record<string, string> = {
     vegetarian: '🥬 Vegetarisch',
     vegan: '🌱 Vegan',
   };
@@ -142,7 +140,7 @@ function BreadRecipeCard({
           }}
           className="absolute top-3 right-3 p-2 bg-white/90 rounded-full hover:bg-white transition-all"
         >
-          <Heart.default
+          <Heart
             className={`h-5 w-5 transition-colors ${
               isFavorite ? 'fill-primary text-primary' : 'text-muted-foreground'
             }`}
@@ -159,10 +157,10 @@ function BreadRecipeCard({
         {/* Meta Information */}
         <div className="flex items-center gap-2 mb-3 text-sm text-muted-foreground flex-wrap">
           <span className="inline-block px-2 py-1 bg-muted rounded text-xs font-medium">
-            {categoryLabel[recipe.category as keyof typeof categoryLabel]}
+            {categoryLabel[recipe.category]}
           </span>
           <span className="inline-block px-2 py-1 bg-muted rounded text-xs font-medium">
-            {typeLabel[recipe.type as keyof typeof typeLabel]}
+            {typeLabel[recipe.type]}
           </span>
           <span className="inline-block px-2 py-1 bg-muted rounded text-xs font-medium">
             ⏱️ {recipe.prepTime} Min
@@ -202,17 +200,15 @@ function BreadRecipeModal({
   onClose: () => void;
 }) {
   const [copied, setCopied] = useState(false);
-  const { X, Heart, Printer, Copy, Check } = require('lucide-react');
-  const { Button } = require('@/components/ui/button');
 
-  const categoryLabel = {
+  const categoryLabel: Record<string, string> = {
     bread: '🍞 Brot',
     rolls: '🥐 Brötchen',
     flatbread: '🫓 Fladenbrot',
     pancakes: '🥞 Pancakes',
   };
 
-  const typeLabel = {
+  const typeLabel: Record<string, string> = {
     vegetarian: '🥬 Vegetarisch',
     vegan: '🌱 Vegan',
   };
@@ -244,8 +240,8 @@ function BreadRecipeModal({
             <img src="${recipe.image}" alt="${recipe.name}" style="max-width: 400px;">
             <h1>${recipe.name}</h1>
             <div class="info">
-              <p><strong>Kategorie:</strong> ${categoryLabel[recipe.category as keyof typeof categoryLabel]}</p>
-              <p><strong>Typ:</strong> ${typeLabel[recipe.type as keyof typeof typeLabel]}</p>
+              <p><strong>Kategorie:</strong> ${categoryLabel[recipe.category]}</p>
+              <p><strong>Typ:</strong> ${typeLabel[recipe.type]}</p>
               <p><strong>Zubereitungszeit:</strong> ${recipe.prepTime} Minuten</p>
               <p><strong>Portionen:</strong> ${recipe.servings}</p>
               <p><strong>Haltbarkeit:</strong> ${recipe.shelfLife}</p>
@@ -324,7 +320,7 @@ function BreadRecipeModal({
             onClick={onClose}
             className="absolute top-4 right-4 p-2 bg-white/90 rounded-full hover:bg-white transition-all"
           >
-            <X.default className="h-5 w-5 text-foreground" />
+            <X className="h-5 w-5 text-foreground" />
           </button>
 
           {/* Title Overlay */}
@@ -340,10 +336,10 @@ function BreadRecipeModal({
           {/* Meta Info */}
           <div className="flex items-center gap-3 mb-6 pb-6 border-b border-border flex-wrap">
             <span className="inline-block px-3 py-1 bg-muted rounded-full text-sm font-medium">
-              {categoryLabel[recipe.category as keyof typeof categoryLabel]}
+              {categoryLabel[recipe.category]}
             </span>
             <span className="inline-block px-3 py-1 bg-muted rounded-full text-sm font-medium">
-              {typeLabel[recipe.type as keyof typeof typeLabel]}
+              {typeLabel[recipe.type]}
             </span>
             <span className="inline-block px-3 py-1 bg-muted rounded-full text-sm font-medium">
               ⏱️ {recipe.prepTime} Min
@@ -441,42 +437,42 @@ function BreadRecipeModal({
 
         {/* Footer Actions */}
         <div className="border-t border-border p-4 flex gap-3 bg-muted/30">
-          <Button.default
+          <Button
             variant="outline"
             onClick={onFavoriteToggle}
             className="gap-2 flex-1"
           >
-            <Heart.default
+            <Heart
               className={`h-4 w-4 ${
                 isFavorite ? 'fill-primary text-primary' : 'text-muted-foreground'
               }`}
             />
             {isFavorite ? 'Favorit' : 'Zu Favoriten'}
-          </Button.default>
-          <Button.default
+          </Button>
+          <Button
             variant="outline"
             onClick={handleCopyIngredients}
             className="gap-2 flex-1"
           >
             {copied ? (
               <>
-                <Check.default className="h-4 w-4" />
+                <Check className="h-4 w-4" />
                 Kopiert!
               </>
             ) : (
               <>
-                <Copy.default className="h-4 w-4" />
+                <Copy className="h-4 w-4" />
                 Zutaten kopieren
               </>
             )}
-          </Button.default>
-          <Button.default
+          </Button>
+          <Button
             onClick={handlePrint}
             className="gap-2 flex-1 bg-primary hover:bg-primary/90"
           >
-            <Printer.default className="h-4 w-4" />
+            <Printer className="h-4 w-4" />
             Drucken
-          </Button.default>
+          </Button>
         </div>
       </div>
     </div>
