@@ -44,34 +44,34 @@ export default function RecipeModal({
           <body>
             <img src="${recipe.image}" alt="${recipe.name}" style="max-width: 400px;">
             <h1>${recipe.name}</h1>
-            <p><strong>Zubereitungszeit:</strong> ${recipe.prepTime} Minuten</p>
-            <p><strong>Typ:</strong> ${recipe.type === 'sweet' ? 'Süßlich' : 'Herzhaft'}</p>
+            <p><strong>Temps de préparation:</strong> ${recipe.prepTime} minutes</p>
+            <p><strong>Type:</strong> ${recipe.type === 'sweet' ? 'Sucré' : 'Salé'}</p>
             
-            <h2>Nährwertangaben</h2>
+            <h2>Valeurs nutritionnelles</h2>
             <div class="nutrition">
               <div class="nutrition-item">
                 <strong>${recipe.nutrition.protein}g</strong>
-                <small>Protein</small>
+                <small>Protéines</small>
               </div>
               <div class="nutrition-item">
                 <strong>${recipe.nutrition.carbs}g</strong>
-                <small>Kohlenhydrate</small>
+                <small>Glucides</small>
               </div>
               <div class="nutrition-item">
                 <strong>${recipe.nutrition.fat}g</strong>
-                <small>Fett</small>
+                <small>Graisses</small>
               </div>
             </div>
-            <p><strong>Kalorien:</strong> ${recipe.nutrition.calories} kcal</p>
-            <p><strong>Ballaststoffe:</strong> ${recipe.nutrition.fiber}g</p>
-            ${recipe.nutrition.specialNutrients.length > 0 ? `<p><strong>Besondere Nährstoffe:</strong> ${recipe.nutrition.specialNutrients.join(', ')}</p>` : ''}
+            <p><strong>Calories:</strong> ${recipe.nutrition.calories} kcal</p>
+            <p><strong>Fibres:</strong> ${recipe.nutrition.fiber}g</p>
+            ${recipe.nutrition.specialNutrients.length > 0 ? `<p><strong>Nutriments spéciaux:</strong> ${recipe.nutrition.specialNutrients.join(', ')}</p>` : ''}
             
-            <h2>Zutaten</h2>
+            <h2>Ingrédients</h2>
             <ul>
               ${recipe.ingredients.map(ing => `<li>${ing.amount} ${ing.name}</li>`).join('')}
             </ul>
             
-            <h2>Zubereitung</h2>
+            <h2>Instructions</h2>
             <ol>
               ${recipe.instructions.map(inst => `<li>${inst}</li>`).join('')}
             </ol>
@@ -134,7 +134,7 @@ export default function RecipeModal({
               ⏱️ {recipe.prepTime} Min
             </span>
             <span className="inline-block px-3 py-1 bg-muted rounded-full text-sm font-medium">
-              {recipe.type === 'sweet' ? '🍰 Süßlich' : '🥗 Herzhaft'}
+              {recipe.type === 'sweet' ? '🍰 Sucré' : '🥗 Salé'}
             </span>
             <span className="text-sm text-muted-foreground">
               {recipe.nutrition.calories} kcal
@@ -144,19 +144,19 @@ export default function RecipeModal({
           {/* Nutrition Grid */}
           <div className="grid grid-cols-4 gap-3 mb-6">
             <div className="text-center p-3 bg-muted rounded">
-              <div className="text-sm text-muted-foreground">Protein</div>
+              <div className="text-sm text-muted-foreground">Protéines</div>
               <div className="text-lg font-bold text-primary">{recipe.nutrition.protein}g</div>
             </div>
             <div className="text-center p-3 bg-muted rounded">
-              <div className="text-sm text-muted-foreground">KH</div>
+              <div className="text-sm text-muted-foreground">Gluc.</div>
               <div className="text-lg font-bold text-primary">{recipe.nutrition.carbs}g</div>
             </div>
             <div className="text-center p-3 bg-muted rounded">
-              <div className="text-sm text-muted-foreground">Fett</div>
+              <div className="text-sm text-muted-foreground">Graisses</div>
               <div className="text-lg font-bold text-primary">{recipe.nutrition.fat}g</div>
             </div>
             <div className="text-center p-3 bg-muted rounded">
-              <div className="text-sm text-muted-foreground">Ballaststoffe</div>
+              <div className="text-sm text-muted-foreground">Fibres</div>
               <div className="text-lg font-bold text-primary">{recipe.nutrition.fiber}g</div>
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function RecipeModal({
           {recipe.nutrition.specialNutrients.length > 0 && (
             <div className="mb-6 p-3 bg-secondary/10 rounded">
               <p className="text-sm text-muted-foreground mb-2">
-                <strong>Besondere Nährstoffe:</strong>
+                <strong>Nutriments spéciaux:</strong>
               </p>
               <div className="flex flex-wrap gap-2">
                 {recipe.nutrition.specialNutrients.map(nutrient => (
@@ -182,7 +182,7 @@ export default function RecipeModal({
 
           {/* Ingredients */}
           <div className="mb-6">
-            <h2 className="text-lg font-semibold text-foreground mb-3">Zutaten</h2>
+            <h2 className="text-lg font-semibold text-foreground mb-3">Ingrédients</h2>
             <ul className="space-y-2">
               {recipe.ingredients.map((ingredient, idx) => (
                 <li key={idx} className="flex gap-3 text-sm">
@@ -195,7 +195,7 @@ export default function RecipeModal({
 
           {/* Instructions */}
           <div className="mb-6">
-            <h2 className="text-lg font-semibold text-foreground mb-3">Zubereitung</h2>
+            <h2 className="text-lg font-semibold text-foreground mb-3">Instructions</h2>
             <ol className="space-y-2 list-decimal list-inside">
               {recipe.instructions.map((instruction, idx) => (
                 <li key={idx} className="text-sm text-foreground">
@@ -218,7 +218,7 @@ export default function RecipeModal({
                 isFavorite ? 'fill-primary text-primary' : 'text-muted-foreground'
               }`}
             />
-            {isFavorite ? 'Favorit' : 'Zu Favoriten'}
+            {isFavorite ? 'Favori' : 'Ajouter aux favoris'}
           </Button>
           <Button
             variant="outline"
@@ -228,12 +228,12 @@ export default function RecipeModal({
             {copied ? (
               <>
                 <Check className="h-4 w-4" />
-                Kopiert!
+                Copié!
               </>
             ) : (
               <>
                 <Copy className="h-4 w-4" />
-                Zutaten kopieren
+                Copier les ingrédients
               </>
             )}
           </Button>
@@ -242,7 +242,7 @@ export default function RecipeModal({
             className="gap-2 flex-1 bg-primary hover:bg-primary/90"
           >
             <Printer className="h-4 w-4" />
-            Drucken
+            Imprimer
           </Button>
         </div>
       </div>
