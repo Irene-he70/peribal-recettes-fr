@@ -1,13 +1,11 @@
 
 import { useState, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { breadRecipes, BreadRecipe } from '@/data/bread-recipes';
 import BreadFilterSidebar from '@/components/BreadFilterSidebar';
 import { Heart, X, Printer, Copy, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Bread() {
-  const { t } = useTranslation();
   const [selectedRecipe, setSelectedRecipe] = useState<BreadRecipe | null>(null);
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
   const [filters, setFilters] = useState({
@@ -69,7 +67,7 @@ export default function Bread() {
           {filteredRecipes.length === 0 && (
             <div className="col-span-full text-center py-12">
               <p className="text-muted-foreground text-lg">
-                {t('recipe.noResults')}
+                Keine Rezepte gefunden. Versuchen Sie, die Filter anzupassen.
               </p>
             </div>
           )}

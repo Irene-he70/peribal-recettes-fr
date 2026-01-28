@@ -1,13 +1,11 @@
 
 import { useState, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { recipes, Recipe } from '@/data/recipes';
 import RecipeCard from '@/components/RecipeCard';
 import RecipeModal from '@/components/RecipeModal';
 import FilterSidebar from '@/components/FilterSidebar';
 
 export default function Home() {
-  const { t } = useTranslation();
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
   const [filters, setFilters] = useState({
@@ -67,7 +65,7 @@ export default function Home() {
           {filteredRecipes.length === 0 && (
             <div className="col-span-full text-center py-12">
               <p className="text-muted-foreground text-lg">
-                {t('recipe.noResults')}
+                Keine Rezepte gefunden. Versuchen Sie, die Filter anzupassen.
               </p>
             </div>
           )}

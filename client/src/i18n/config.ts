@@ -25,8 +25,6 @@ i18n
     resources,
     fallbackLng: 'de',
     defaultNS: 'common',
-    ns: ['common', 'recipes'],
-    fallbackNS: 'common',
     interpolation: {
       escapeValue: false,
     },
@@ -34,8 +32,6 @@ i18n
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
     },
-    supportedLngs: ['de', 'en', 'fr', 'es'],
-    nonExplicitSupportedLngs: true,
   });
 
 export default i18n;
