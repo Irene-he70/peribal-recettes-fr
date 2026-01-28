@@ -11,9 +11,8 @@ import Header from "./components/Header";
 
 
 function Router() {
-  const base = "/peribal-recettes-fr";
   return (
-    <WouterRouter base={base}>
+    <>
       <Header />
       <Switch>
         <Route path="/" component={Home} />
@@ -23,7 +22,7 @@ function Router() {
         {/* Final fallback route */}
         <Route component={NotFound} />
       </Switch>
-    </WouterRouter>
+    </>
   );
 }
 
