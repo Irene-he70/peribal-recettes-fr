@@ -3,7 +3,7 @@
     "breakfast": "🍳 Petit-déjeuner",
     "bread": "🍞 Pain & Pâtisseries",
     "dinner": "🍽️ Dîner",
-    "shoppingList": "Liste d'courses",
+    "shoppingList": "Liste de courses",
     "pdfSweet": "PDF (Sucré)",
     "pdfSavory": "PDF (Salé)"
   },
@@ -27,7 +27,7 @@
   "recipe": {
     "details": "Détails",
     "print": "Imprimer",
-    "addToShoppingList": "Ajouter à la Liste d'courses",
+    "addToShoppingList": "Ajouter à la liste de courses",
     "protein": "Protéine",
     "carbs": "Glucides",
     "fat": "Graisse",
@@ -39,7 +39,7 @@
     "shelfLife": "Durée de Conservation",
     "freezable": "Congelable: Oui",
     "notFreezable": "Non congelable",
-    "found": "Recette{{count}} trouvée",
+    "found": "{{count}} recette(s) trouvée(s)",
     "noResults": "Aucune recette trouvée. Veuillez ajuster vos filtres."
   },
   "breakfast": {
@@ -52,9 +52,9 @@
     "subtitle": "Recettes de Dîner"
   },
   "shoppingList": {
-    "title": "Liste d'courses",
-    "empty": "Votre liste d'courses est vide",
-    "download": "Télécharger la Liste d'courses",
+    "title": "Liste de courses",
+    "empty": "Votre liste de courses est vide",
+    "download": "Télécharger la liste de courses",
     "items": "Ingrédients"
   }
 }

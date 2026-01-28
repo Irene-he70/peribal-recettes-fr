@@ -1,4 +1,3 @@
-
 export interface Recipe {
   id: string;
   name: string;
@@ -22,24 +21,24 @@ export const recipes: Recipe[] = [
   // SWEET RECIPES
   {
     id: 'sweet_01',
-    name: 'Vanille-Quark mit Beeren',
+    name: 'Fromage blanc à la vanille avec fruits rouges',
     type: 'sweet',
     prepTime: 5,
     image: '/images/sweet_01_vanille_quark.png',
     ingredients: [
-      { name: 'Quark (20% Fett)', amount: '200g' },
-      { name: 'Vanilleextrakt', amount: '1 TL' },
-      { name: 'Blaubeeren', amount: '100g' },
-      { name: 'Himbeeren', amount: '80g' },
-      { name: 'Mandeln (gehackt)', amount: '30g' },
-      { name: 'Honig', amount: '1 TL' }
+      { name: 'Fromage blanc (20% de matière grasse)', amount: '200g' },
+      { name: 'Extrait de vanille', amount: '1 c. à c.' },
+      { name: 'Myrtilles', amount: '100g' },
+      { name: 'Framboises', amount: '80g' },
+      { name: 'Amandes (hachées)', amount: '30g' },
+      { name: 'Miel', amount: '1 c. à c.' }
     ],
     instructions: [
-      'Quark in eine Schüssel geben',
-      'Vanilleextrakt einrühren',
-      'Beeren vorsichtig unterheben',
-      'Mit gehackten Mandeln und Honig toppen',
-      'Sofort servieren'
+      'Mettre le fromage blanc dans un bol',
+      'Incorporer l’extrait de vanille',
+      'Incorporer délicatement les fruits rouges',
+      'Garnir avec les amandes hachées et le miel',
+      'Servir immédiatement'
     ],
     nutrition: {
       carbs: 18,
@@ -47,30 +46,30 @@ export const recipes: Recipe[] = [
       fat: 12,
       calories: 310,
       fiber: 4,
-      specialNutrients: ['Vitamin C', 'Kalzium', 'Probiotika']
+      specialNutrients: ['Vitamine C', 'Calcium', 'Probiotiques']
     },
-    description: 'Ein cremiger, fruchtiger Frühstück mit hohem Proteingehalt'
+    description: 'Un petit-déjeuner crémeux et fruité riche en protéines'
   },
   {
     id: 'sweet_02',
-    name: 'Schoko-Bananen-Shake',
+    name: 'Shake banane-chocolat',
     type: 'sweet',
     prepTime: 5,
     image: '/images/sweet_02_schoko_shake.png',
     ingredients: [
-      { name: 'Griechischer Joghurt', amount: '150g' },
-      { name: 'Banane', amount: '1 kleine' },
-      { name: 'Kakaopulver (ungesüßt)', amount: '2 EL' },
-      { name: 'Mandelmilch', amount: '200ml' },
-      { name: 'Proteinpulver (Vanilla)', amount: '1 Scoop' },
-      { name: 'Eiswürfel', amount: 'eine Handvoll' }
+      { name: 'Yaourt grec', amount: '150g' },
+      { name: 'Banane', amount: '1 petite' },
+      { name: 'Poudre de cacao (non sucrée)', amount: '2 c. à s.' },
+      { name: 'Lait d’amande', amount: '200ml' },
+      { name: 'Poudre de protéine (vanille)', amount: '1 dose' },
+      { name: 'Glaçons', amount: 'une poignée' }
     ],
     instructions: [
-      'Alle Zutaten in einen Mixer geben',
-      '30 Sekunden mixen bis cremig',
-      'In ein Glas gießen',
-      'Mit einer Bananenscheibe garnieren',
-      'Sofort trinken'
+      'Mettre tous les ingrédients dans un mixeur',
+      'Mixer 30 secondes jusqu’à obtenir une texture crémeuse',
+      'Verser dans un verre',
+      'Décorer avec une tranche de banane',
+      'Boire immédiatement'
     ],
     nutrition: {
       carbs: 22,
@@ -78,29 +77,29 @@ export const recipes: Recipe[] = [
       fat: 8,
       calories: 320,
       fiber: 3,
-      specialNutrients: ['Magnesium', 'Vitamin B12', 'Antioxidantien']
+      specialNutrients: ['Magnésium', 'Vitamine B12', 'Antioxydants']
     },
-    description: 'Ein cremiger Protein-Shake mit Schokolade und Banane'
+    description: 'Un shake protéiné crémeux au chocolat et à la banane'
   },
   {
     id: 'sweet_03',
-    name: 'Joghurt mit Walnüssen und Zimt',
+    name: 'Yaourt aux noix et à la cannelle',
     type: 'sweet',
     prepTime: 5,
     image: '/images/sweet_03_joghurt_walnuss.png',
     ingredients: [
-      { name: 'Griechischer Joghurt (0% Fett)', amount: '200g' },
-      { name: 'Walnüsse (gehackt)', amount: '40g' },
-      { name: 'Zimt', amount: '1/2 TL' },
-      { name: 'Apfel (gerieben)', amount: '1 kleine' },
-      { name: 'Honig', amount: '1 TL' }
+      { name: 'Yaourt grec (0% de matière grasse)', amount: '200g' },
+      { name: 'Noix (hachées)', amount: '40g' },
+      { name: 'Cannelle', amount: '1/2 c. à c.' },
+      { name: 'Pomme (râpée)', amount: '1 petite' },
+      { name: 'Miel', amount: '1 c. à c.' }
     ],
     instructions: [
-      'Joghurt in eine Schüssel geben',
-      'Geriebenen Apfel einrühren',
-      'Walnüsse darüber streuen',
-      'Mit Zimt bestreuen',
-      'Mit Honig drizzeln'
+      'Mettre le yaourt dans un bol',
+      'Incorporer la pomme râpée',
+      'Parsemer les noix dessus',
+      'Saupoudrer de cannelle',
+      'Ajouter un filet de miel'
     ],
     nutrition: {
       carbs: 16,
@@ -108,30 +107,30 @@ export const recipes: Recipe[] = [
       fat: 14,
       calories: 310,
       fiber: 3,
-      specialNutrients: ['Omega-3-Fettsäuren', 'Kalzium', 'Antioxidantien']
+      specialNutrients: ['Acides gras oméga-3', 'Calcium', 'Antioxydants']
     },
-    description: 'Ein klassisches, einfaches Frühstück mit Nüssen'
+    description: 'Un petit-déjeuner classique et simple aux noix'
   },
   {
     id: 'sweet_04',
-    name: 'Chia-Pudding mit Himbeeren',
+    name: 'Pudding de chia aux framboises',
     type: 'sweet',
     prepTime: 10,
     image: '/images/sweet_04_chia_pudding.png',
     ingredients: [
-      { name: 'Kokosmilch (vollfett)', amount: '150ml' },
-      { name: 'Mandelmilch', amount: '100ml' },
-      { name: 'Chia-Samen', amount: '3 EL' },
-      { name: 'Himbeeren (frisch)', amount: '100g' },
-      { name: 'Vanilleextrakt', amount: '1/2 TL' },
-      { name: 'Stevia', amount: 'nach Geschmack' }
+      { name: 'Lait de coco (entier)', amount: '150ml' },
+      { name: 'Lait d’amande', amount: '100ml' },
+      { name: 'Graines de chia', amount: '3 c. à s.' },
+      { name: 'Framboises (fraîches)', amount: '100g' },
+      { name: 'Extrait de vanille', amount: '1/2 c. à c.' },
+      { name: 'Stévia', amount: 'selon goût' }
     ],
     instructions: [
-      'Kokosmilch und Mandelmilch mischen',
-      'Chia-Samen hinzufügen',
-      'Vanilleextrakt und Stevia einrühren',
-      'Über Nacht im Kühlschrank stehen lassen',
-      'Mit Himbeeren toppen und servieren'
+      'Mélanger le lait de coco et le lait d’amande',
+      'Ajouter les graines de chia',
+      'Incorporer l’extrait de vanille et la stévia',
+      'Laisser reposer toute la nuit au réfrigérateur',
+      'Garnir de framboises et servir'
     ],
     nutrition: {
       carbs: 20,
@@ -139,29 +138,29 @@ export const recipes: Recipe[] = [
       fat: 16,
       calories: 340,
       fiber: 8,
-      specialNutrients: ['Omega-3-Fettsäuren', 'Ballaststoffe', 'Kalzium']
+      specialNutrients: ['Acides gras oméga-3', 'Fibres', 'Calcium']
     },
-    description: 'Ein Over-Night-Pudding, perfekt für die Vorbereitung'
+    description: 'Un pudding préparé la veille, parfait pour l’organisation'
   },
   {
     id: 'sweet_05',
-    name: 'Hüttenkäse mit Apfel und Zimt',
+    name: 'Fromage blanc aux pommes et à la cannelle',
     type: 'sweet',
     prepTime: 5,
     image: '/images/sweet_05_huettenkase_apfel.png',
     ingredients: [
-      { name: 'Hüttenkäse (2% Fett)', amount: '200g' },
-      { name: 'Apfel (gewürfelt)', amount: '1 mittel' },
-      { name: 'Zimt', amount: '1/2 TL' },
-      { name: 'Walnüsse (gehackt)', amount: '25g' },
-      { name: 'Honig', amount: '1 TL' }
+      { name: 'Fromage blanc (2% de matière grasse)', amount: '200g' },
+      { name: 'Pomme (en dés)', amount: '1 moyenne' },
+      { name: 'Cannelle', amount: '1/2 c. à c.' },
+      { name: 'Noix (hachées)', amount: '25g' },
+      { name: 'Miel', amount: '1 c. à c.' }
     ],
     instructions: [
-      'Hüttenkäse in eine Schüssel geben',
-      'Apfelwürfel hinzufügen',
-      'Mit Zimt bestreuen',
-      'Walnüsse darüber streuen',
-      'Mit Honig drizzeln'
+      'Mettre le fromage blanc dans un bol',
+      'Ajouter les dés de pomme',
+      'Saupoudrer de cannelle',
+      'Parsemer les noix dessus',
+      'Ajouter un filet de miel'
     ],
     nutrition: {
       carbs: 17,
@@ -169,30 +168,30 @@ export const recipes: Recipe[] = [
       fat: 10,
       calories: 300,
       fiber: 2,
-      specialNutrients: ['Kalzium', 'Selen', 'Vitamin B12']
+      specialNutrients: ['Calcium', 'Sélénium', 'Vitamine B12']
     },
-    description: 'Ein cremiges, fruchtiges Frühstück mit viel Protein'
+    description: 'Un petit-déjeuner crémeux et fruité riche en protéines'
   },
   {
     id: 'sweet_06',
-    name: 'Beeren-Crumble',
+    name: 'Crumble aux fruits rouges',
     type: 'sweet',
     prepTime: 20,
     image: '/images/sweet_06_beeren_crumble.png',
     ingredients: [
-      { name: 'Blaubeeren', amount: '100g' },
-      { name: 'Himbeeren', amount: '80g' },
-      { name: 'Haferflocken', amount: '50g' },
-      { name: 'Mandeln (gehackt)', amount: '30g' },
-      { name: 'Butter', amount: '2 EL' },
-      { name: 'Honig', amount: '1 TL' }
+      { name: 'Myrtilles', amount: '100g' },
+      { name: 'Framboises', amount: '80g' },
+      { name: 'Flocons d’avoine', amount: '50g' },
+      { name: 'Amandes (hachées)', amount: '30g' },
+      { name: 'Beurre', amount: '2 c. à s.' },
+      { name: 'Miel', amount: '1 c. à c.' }
     ],
     instructions: [
-      'Beeren in eine Auflaufform geben',
-      'Haferflocken, Mandeln, Butter und Honig mischen',
-      'Mischung über den Beeren verteilen',
-      '15 Minuten bei 180°C backen',
-      'Mit Joghurt servieren'
+      'Mettre les fruits rouges dans un plat à gratin',
+      'Mélanger flocons d’avoine, amandes, beurre et miel',
+      'Répartir le mélange sur les fruits',
+      'Cuire 15 minutes à 180°C',
+      'Servir avec du yaourt'
     ],
     nutrition: {
       carbs: 28,
@@ -200,30 +199,30 @@ export const recipes: Recipe[] = [
       fat: 12,
       calories: 360,
       fiber: 5,
-      specialNutrients: ['Antioxidantien', 'Ballaststoffe', 'Vitamin C']
+      specialNutrients: ['Antioxydants', 'Fibres', 'Vitamine C']
     },
-    description: 'Ein warmes, knuspriges Frühstück mit Beeren'
+    description: 'Un petit-déjeuner chaud et croustillant aux fruits rouges'
   },
   {
     id: 'sweet_07',
-    name: 'Espresso-Frappe',
+    name: 'Frappe espresso',
     type: 'sweet',
     prepTime: 5,
     image: '/images/sweet_07_espresso_frappe.png',
     ingredients: [
-      { name: 'Espresso (stark)', amount: '60ml' },
-      { name: 'Griechischer Joghurt', amount: '150g' },
-      { name: 'Mandelmilch', amount: '100ml' },
-      { name: 'Proteinpulver (Vanilla)', amount: '1 Scoop' },
-      { name: 'Eiswürfel', amount: 'eine Handvoll' },
-      { name: 'Kakao (zum Toppen)', amount: '1 Prise' }
+      { name: 'Espresso (fort)', amount: '60ml' },
+      { name: 'Yaourt grec', amount: '150g' },
+      { name: 'Lait d’amande', amount: '100ml' },
+      { name: 'Poudre de protéine (vanille)', amount: '1 dose' },
+      { name: 'Glaçons', amount: 'une poignée' },
+      { name: 'Cacao (pour garnir)', amount: '1 pincée' }
     ],
     instructions: [
-      'Espresso zubereiten und abkühlen lassen',
-      'Joghurt, Mandelmilch, Proteinpulver und Eiswürfel mischen',
-      'Espresso hinzufügen',
-      'Alles mixen bis cremig',
-      'Mit Kakao toppen'
+      'Préparer l’espresso et laisser refroidir',
+      'Mélanger yaourt, lait d’amande, poudre de protéine et glaçons',
+      'Ajouter l’espresso',
+      'Mixer jusqu’à obtenir une texture crémeuse',
+      'Garnir de cacao'
     ],
     nutrition: {
       carbs: 16,
@@ -231,29 +230,29 @@ export const recipes: Recipe[] = [
       fat: 6,
       calories: 280,
       fiber: 1,
-      specialNutrients: ['Koffein', 'Antioxidantien', 'Vitamin B12']
+      specialNutrients: ['Caféine', 'Antioxydants', 'Vitamine B12']
     },
-    description: 'Ein belebender Kaffee-Protein-Shake'
+    description: 'Un shake protéiné caféiné et revitalisant'
   },
   {
     id: 'sweet_08',
-    name: 'Kokosjogurt mit Mango',
+    name: 'Yaourt de coco à la mangue',
     type: 'sweet',
     prepTime: 5,
     image: '/images/sweet_08_kokos_joghurt_mango.png',
     ingredients: [
-      { name: 'Kokosjogurt', amount: '200g' },
-      { name: 'Mango (gewürfelt)', amount: '150g' },
-      { name: 'Hanfsamen', amount: '2 EL' },
-      { name: 'Kokosflocken (ungesüßt)', amount: '2 EL' },
-      { name: 'Honig', amount: '1 TL' }
+      { name: 'Yaourt de coco', amount: '200g' },
+      { name: 'Mangue (en dés)', amount: '150g' },
+      { name: 'Graines de chanvre', amount: '2 c. à s.' },
+      { name: 'Flocons de noix de coco (non sucrés)', amount: '2 c. à s.' },
+      { name: 'Miel', amount: '1 c. à c.' }
     ],
     instructions: [
-      'Kokosjogurt in eine Schüssel geben',
-      'Mangowürfel hinzufügen',
-      'Hanfsamen darüber streuen',
-      'Mit Kokosflocken toppen',
-      'Mit Honig drizzeln'
+      'Mettre le yaourt de coco dans un bol',
+      'Ajouter les dés de mangue',
+      'Parsemer de graines de chanvre',
+      'Garnir de flocons de noix de coco',
+      'Ajouter un filet de miel'
     ],
     nutrition: {
       carbs: 24,
@@ -261,30 +260,30 @@ export const recipes: Recipe[] = [
       fat: 14,
       calories: 360,
       fiber: 3,
-      specialNutrients: ['Vitamin C', 'Magnesium', 'Omega-3-Fettsäuren']
+      specialNutrients: ['Vitamine C', 'Magnésium', 'Acides gras oméga-3']
     },
-    description: 'Ein tropisches Frühstück mit Kokosnote'
+    description: 'Un petit-déjeuner tropical avec une touche de coco'
   },
   {
     id: 'sweet_09',
-    name: 'Protein-Brötchen',
+    name: 'Petits pains protéinés',
     type: 'sweet',
     prepTime: 25,
     image: '/images/sweet_09_quark_broetchen.png',
     ingredients: [
-      { name: 'Quark (20% Fett)', amount: '250g' },
-      { name: 'Eier', amount: '3' },
-      { name: 'Proteinpulver (Vanilla)', amount: '2 Scoops' },
-      { name: 'Backpulver', amount: '1 TL' },
-      { name: 'Vanilleextrakt', amount: '1 TL' },
-      { name: 'Stevia', amount: 'nach Geschmack' }
+      { name: 'Fromage blanc (20% de matière grasse)', amount: '250g' },
+      { name: 'Œufs', amount: '3' },
+      { name: 'Poudre de protéine (vanille)', amount: '2 doses' },
+      { name: 'Levure chimique', amount: '1 c. à c.' },
+      { name: 'Extrait de vanille', amount: '1 c. à c.' },
+      { name: 'Stévia', amount: 'selon goût' }
     ],
     instructions: [
-      'Quark, Eier, Proteinpulver, Backpulver, Vanilleextrakt und Stevia mischen',
-      'Teig in Muffinformen geben',
-      '20 Minuten bei 180°C backen',
-      'Abkühlen lassen',
-      'Mit Frischkäse oder Marmelade servieren'
+      'Mélanger fromage blanc, œufs, poudre de protéine, levure chimique, extrait de vanille et stévia',
+      'Verser la pâte dans des moules à muffins',
+      'Cuire 20 minutes à 180°C',
+      'Laisser refroidir',
+      'Servir avec du fromage frais ou de la confiture'
     ],
     nutrition: {
       carbs: 12,
@@ -292,29 +291,29 @@ export const recipes: Recipe[] = [
       fat: 10,
       calories: 310,
       fiber: 0,
-      specialNutrients: ['Kalzium', 'Vitamin B12', 'Selen']
+      specialNutrients: ['Calcium', 'Vitamine B12', 'Sélénium']
     },
-    description: 'Fluffige Protein-Brötchen, perfekt zum Mitnehmen'
+    description: 'Petits pains protéinés moelleux, parfaits à emporter'
   },
   {
     id: 'sweet_10',
-    name: 'Ricotta mit Pfirsich',
+    name: 'Ricotta à la pêche',
     type: 'sweet',
     prepTime: 10,
     image: '/images/sweet_10_ricotta_pfirsich.png',
     ingredients: [
       { name: 'Ricotta', amount: '200g' },
-      { name: 'Pfirsich (gegrillt)', amount: '2 Hälften' },
-      { name: 'Pistazien (gehackt)', amount: '30g' },
-      { name: 'Honig', amount: '1 TL' },
-      { name: 'Minze (frisch)', amount: 'einige Blätter' }
+      { name: 'Pêche (grillée)', amount: '2 moitiés' },
+      { name: 'Pistaches (hachées)', amount: '30g' },
+      { name: 'Miel', amount: '1 c. à c.' },
+      { name: 'Menthe (fraîche)', amount: 'quelques feuilles' }
     ],
     instructions: [
-      'Pfirsiche halbieren und entkernen',
-      'Pfirsiche 3 Minuten pro Seite grillen',
-      'Ricotta auf einen Teller geben',
-      'Gegrillte Pfirsiche darauf anrichten',
-      'Mit Pistazien toppen und mit Honig drizzeln'
+      'Couper les pêches en deux et dénoyauter',
+      'Griller les pêches 3 minutes de chaque côté',
+      'Mettre la ricotta dans une assiette',
+      'Disposer les pêches grillées dessus',
+      'Garnir de pistaches et arroser de miel'
     ],
     nutrition: {
       carbs: 20,
@@ -322,30 +321,30 @@ export const recipes: Recipe[] = [
       fat: 12,
       calories: 340,
       fiber: 2,
-      specialNutrients: ['Vitamin A', 'Kalzium', 'Vitamin C']
+      specialNutrients: ['Vitamine A', 'Calcium', 'Vitamine C']
     },
-    description: 'Ein elegantes, sommerliches Frühstück'
+    description: 'Un petit-déjeuner élégant et estival'
   },
   {
     id: 'sweet_11',
-    name: 'Protein-Waffeln mit Kirschen',
+    name: 'Gaufres protéinées aux cerises',
     type: 'sweet',
     prepTime: 20,
     image: '/images/sweet_11_protein_waffeln.png',
     ingredients: [
-      { name: 'Eier', amount: '3' },
-      { name: 'Griechischer Joghurt', amount: '150g' },
-      { name: 'Proteinpulver (Vanilla)', amount: '1 Scoop' },
-      { name: 'Backpulver', amount: '1/2 TL' },
-      { name: 'Kirschen (frisch)', amount: '100g' },
-      { name: 'Honig', amount: '1 TL' }
+      { name: 'Œufs', amount: '3' },
+      { name: 'Yaourt grec', amount: '150g' },
+      { name: 'Poudre de protéine (vanille)', amount: '1 dose' },
+      { name: 'Levure chimique', amount: '1/2 c. à c.' },
+      { name: 'Cerises (fraîches)', amount: '100g' },
+      { name: 'Miel', amount: '1 c. à c.' }
     ],
     instructions: [
-      'Eier, Joghurt, Proteinpulver und Backpulver mischen',
-      'Teig in das Waffeleisen geben',
-      'Waffeln goldbraun backen',
-      'Mit Kirschen toppen',
-      'Mit Honig drizzeln'
+      'Mélanger œufs, yaourt, poudre de protéine et levure chimique',
+      'Verser la pâte dans le gaufrier',
+      'Cuire les gaufres jusqu’à ce qu’elles soient dorées',
+      'Garnir de cerises',
+      'Ajouter un filet de miel'
     ],
     nutrition: {
       carbs: 18,
@@ -353,30 +352,30 @@ export const recipes: Recipe[] = [
       fat: 10,
       calories: 320,
       fiber: 2,
-      specialNutrients: ['Antioxidantien', 'Kalzium', 'Vitamin B12']
+      specialNutrients: ['Antioxydants', 'Calcium', 'Vitamine B12']
     },
-    description: 'Fluffige Protein-Waffeln mit frischen Kirschen'
+    description: 'Gaufres protéinées moelleuses aux cerises fraîches'
   },
   {
     id: 'sweet_12',
-    name: 'Baked Oats mit Apfel',
+    name: 'Baked oats à la pomme',
     type: 'sweet',
     prepTime: 30,
     image: '/images/sweet_12_baked_oats.png',
     ingredients: [
-      { name: 'Haferflocken (Großblatt)', amount: '80g' },
-      { name: 'Eier', amount: '2' },
-      { name: 'Griechischer Joghurt', amount: '100g' },
-      { name: 'Apfel (gewürfelt)', amount: '1 mittel' },
-      { name: 'Pekannüsse (gehackt)', amount: '30g' },
-      { name: 'Zimt', amount: '1/2 TL' }
+      { name: 'Flocons d’avoine (grosses graines)', amount: '80g' },
+      { name: 'Œufs', amount: '2' },
+      { name: 'Yaourt grec', amount: '100g' },
+      { name: 'Pomme (en dés)', amount: '1 moyenne' },
+      { name: 'Noix de pécan (hachées)', amount: '30g' },
+      { name: 'Cannelle', amount: '1/2 c. à c.' }
     ],
     instructions: [
-      'Haferflocken, Eier, Joghurt und Zimt mischen',
-      'Apfelwürfel einrühren',
-      'In eine Auflaufform geben',
-      '25 Minuten bei 180°C backen',
-      'Mit Pekannüssen toppen'
+      'Mélanger flocons d’avoine, œufs, yaourt et cannelle',
+      'Incorporer les dés de pomme',
+      'Verser dans un plat à gratin',
+      'Cuire 25 minutes à 180°C',
+      'Garnir de noix de pécan'
     ],
     nutrition: {
       carbs: 32,
@@ -384,30 +383,30 @@ export const recipes: Recipe[] = [
       fat: 12,
       calories: 380,
       fiber: 5,
-      specialNutrients: ['Ballaststoffe', 'Magnesium', 'Vitamin B']
+      specialNutrients: ['Fibres', 'Magnésium', 'Vitamine B']
     },
-    description: 'Ein warmes, sättigendes Frühstück'
+    description: 'Un petit-déjeuner chaud et rassasiant'
   },
   {
     id: 'sweet_13',
-    name: 'Milchreis mit Vanille',
+    name: 'Riz au lait à la vanille',
     type: 'sweet',
     prepTime: 20,
     image: '/images/sweet_13_milchreis.png',
     ingredients: [
-      { name: 'Vollkornreis', amount: '60g' },
-      { name: 'Milch (2% Fett)', amount: '300ml' },
-      { name: 'Proteinpulver (Vanilla)', amount: '1 Scoop' },
-      { name: 'Vanilleextrakt', amount: '1 TL' },
-      { name: 'Zimt', amount: '1/4 TL' },
-      { name: 'Honig', amount: '1 TL' }
+      { name: 'Riz complet', amount: '60g' },
+      { name: 'Lait (2% de matière grasse)', amount: '300ml' },
+      { name: 'Poudre de protéine (vanille)', amount: '1 dose' },
+      { name: 'Extrait de vanille', amount: '1 c. à c.' },
+      { name: 'Cannelle', amount: '1/4 c. à c.' },
+      { name: 'Miel', amount: '1 c. à c.' }
     ],
     instructions: [
-      'Reis in Milch kochen bis weich (ca. 15 Min)',
-      'Proteinpulver und Vanilleextrakt einrühren',
-      'Mit Zimt bestreuen',
-      'Mit Honig drizzeln',
-      'Warm servieren'
+      'Cuire le riz dans le lait jusqu’à tendreté (env. 15 min)',
+      'Incorporer la poudre de protéine et l’extrait de vanille',
+      'Saupoudrer de cannelle',
+      'Ajouter un filet de miel',
+      'Servir chaud'
     ],
     nutrition: {
       carbs: 38,
@@ -415,30 +414,30 @@ export const recipes: Recipe[] = [
       fat: 6,
       calories: 340,
       fiber: 2,
-      specialNutrients: ['Kalzium', 'Vitamin B', 'Magnesium']
+      specialNutrients: ['Calcium', 'Vitamine B', 'Magnésium']
     },
-    description: 'Ein klassisches, beruhigendes Frühstück'
+    description: 'Un petit-déjeuner classique et réconfortant'
   },
   {
     id: 'sweet_14',
-    name: 'Frühstückspizza mit Früchten',
+    name: 'Pizza petit-déjeuner aux fruits',
     type: 'sweet',
     prepTime: 25,
     image: '/images/sweet_14_fruehstueckspizza.png',
     ingredients: [
-      { name: 'Fladen/Pita-Brot', amount: '1' },
-      { name: 'Quark (20% Fett)', amount: '150g' },
-      { name: 'Erdbeeren (geschnitten)', amount: '100g' },
-      { name: 'Blaubeeren', amount: '50g' },
-      { name: 'Kiwi (geschnitten)', amount: '1' },
-      { name: 'Honig', amount: '1 TL' }
+      { name: 'Pain plat/pita', amount: '1' },
+      { name: 'Fromage blanc (20% de matière grasse)', amount: '150g' },
+      { name: 'Fraises (coupées)', amount: '100g' },
+      { name: 'Myrtilles', amount: '50g' },
+      { name: 'Kiwi (coupé)', amount: '1' },
+      { name: 'Miel', amount: '1 c. à c.' }
     ],
     instructions: [
-      'Fladen im Ofen kurz aufwärmen',
-      'Quark als Basis verteilen',
-      'Früchte dekorativ anordnen',
-      'Mit Honig drizzeln',
-      'Servieren'
+      'Réchauffer brièvement le pain au four',
+      'Étaler le fromage blanc en base',
+      'Disposer les fruits de manière décorative',
+      'Ajouter un filet de miel',
+      'Servir'
     ],
     nutrition: {
       carbs: 28,
@@ -446,33 +445,33 @@ export const recipes: Recipe[] = [
       fat: 8,
       calories: 320,
       fiber: 3,
-      specialNutrients: ['Vitamin C', 'Kalzium', 'Antioxidantien']
+      specialNutrients: ['Vitamine C', 'Calcium', 'Antioxydants']
     },
-    description: 'Eine kreative, bunte Frühstücksvariante'
+    description: 'Une variante créative et colorée pour le petit-déjeuner'
   },
 
   // SAVORY RECIPES
   {
     id: 'savory_01',
-    name: 'Rührei mit Spinat und Feta',
+    name: 'Œufs brouillés aux épinards et feta',
     type: 'savory',
     prepTime: 10,
     image: '/images/savory_01_ruehrei_spinat.png',
     ingredients: [
-      { name: 'Eier', amount: '3' },
-      { name: 'Spinat (frisch)', amount: '150g' },
-      { name: 'Feta-Käse (gewürfelt)', amount: '50g' },
-      { name: 'Olivenöl', amount: '1 EL' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' },
-      { name: 'Schnittlauch', amount: '1 EL' }
+      { name: 'Œufs', amount: '3' },
+      { name: 'Épinards (frais)', amount: '150g' },
+      { name: 'Feta (en dés)', amount: '50g' },
+      { name: 'Huile d’olive', amount: '1 c. à s.' },
+      { name: 'Sel & poivre', amount: 'selon goût' },
+      { name: 'Ciboulette', amount: '1 c. à s.' }
     ],
     instructions: [
-      'Olivenöl in einer Pfanne erhitzen',
-      'Spinat kurz anbraten',
-      'Eier verquirlen und in die Pfanne geben',
-      'Rühren bis die Eier gar sind',
-      'Feta und Schnittlauch hinzufügen',
-      'Mit Salz und Pfeffer würzen'
+      'Chauffer l’huile d’olive dans une poêle',
+      'Faire revenir brièvement les épinards',
+      'Battre les œufs et les verser dans la poêle',
+      'Remuer jusqu’à cuisson des œufs',
+      'Ajouter la feta et la ciboulette',
+      'Assaisonner avec sel et poivre'
     ],
     nutrition: {
       carbs: 8,
@@ -480,30 +479,30 @@ export const recipes: Recipe[] = [
       fat: 18,
       calories: 340,
       fiber: 2,
-      specialNutrients: ['Eisen', 'Kalzium', 'Vitamin K']
+      specialNutrients: ['Fer', 'Calcium', 'Vitamine K']
     },
-    description: 'Ein klassisches, schnelles Frühstück mit viel Protein'
+    description: 'Un petit-déjeuner classique et rapide riche en protéines'
   },
   {
     id: 'savory_02',
-    name: 'Hüttenkäse mit Tomate und Kräutern',
+    name: 'Fromage blanc à la tomate et aux herbes',
     type: 'savory',
     prepTime: 5,
     image: '/images/savory_02_huettenkase_tomate.png',
     ingredients: [
-      { name: 'Hüttenkäse (2% Fett)', amount: '200g' },
-      { name: 'Kirschtomaten (halbiert)', amount: '150g' },
-      { name: 'Schnittlauch (gehackt)', amount: '2 EL' },
-      { name: 'Petersilie (gehackt)', amount: '1 EL' },
-      { name: 'Olivenöl', amount: '1 TL' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' }
+      { name: 'Fromage blanc (2% de matière grasse)', amount: '200g' },
+      { name: 'Tomates cerises (coupées en deux)', amount: '150g' },
+      { name: 'Ciboulette (hachée)', amount: '2 c. à s.' },
+      { name: 'Persil (haché)', amount: '1 c. à s.' },
+      { name: 'Huile d’olive', amount: '1 c. à c.' },
+      { name: 'Sel & poivre', amount: 'selon goût' }
     ],
     instructions: [
-      'Hüttenkäse in eine Schüssel geben',
-      'Kirschtomaten hinzufügen',
-      'Schnittlauch und Petersilie einrühren',
-      'Mit Olivenöl drizzeln',
-      'Mit Salz und Pfeffer würzen'
+      'Mettre le fromage blanc dans un bol',
+      'Ajouter les tomates cerises',
+      'Incorporer la ciboulette et le persil',
+      'Ajouter un filet d’huile d’olive',
+      'Assaisonner avec sel et poivre'
     ],
     nutrition: {
       carbs: 10,
@@ -511,31 +510,31 @@ export const recipes: Recipe[] = [
       fat: 8,
       calories: 280,
       fiber: 2,
-      specialNutrients: ['Lycopin', 'Kalzium', 'Vitamin C']
+      specialNutrients: ['Lycopène', 'Calcium', 'Vitamine C']
     },
-    description: 'Ein frisches, leichtes Frühstück'
+    description: 'Un petit-déjeuner frais et léger'
   },
   {
     id: 'savory_03',
-    name: 'Tofu-Rührei Asia-Style',
+    name: 'Tofu brouillé style asiatique',
     type: 'savory',
     prepTime: 10,
     image: '/images/savory_03_tofu_scramble.png',
     ingredients: [
-      { name: 'Tofu (fest)', amount: '250g' },
-      { name: 'Kurkuma', amount: '1/2 TL' },
-      { name: 'Sojasauce', amount: '1 TL' },
-      { name: 'Ingwer (gerieben)', amount: '1/2 TL' },
-      { name: 'Sesamöl', amount: '1 TL' },
-      { name: 'Frühlingszwiebeln', amount: '2' }
+      { name: 'Tofu (ferme)', amount: '250g' },
+      { name: 'Curcuma', amount: '1/2 c. à c.' },
+      { name: 'Sauce soja', amount: '1 c. à c.' },
+      { name: 'Gingembre (râpé)', amount: '1/2 c. à c.' },
+      { name: 'Huile de sésame', amount: '1 c. à c.' },
+      { name: 'Ciboule', amount: '2' }
     ],
     instructions: [
-      'Tofu mit den Händen in Stücke zerkrümeln',
-      'Sesamöl in einer Pfanne erhitzen',
-      'Tofu anbraten',
-      'Kurkuma, Sojasauce und Ingwer hinzufügen',
-      'Frühlingszwiebeln darüber streuen',
-      'Servieren'
+      'Émietter le tofu à la main',
+      'Chauffer l’huile de sésame dans une poêle',
+      'Faire revenir le tofu',
+      'Ajouter curcuma, sauce soja et gingembre',
+      'Parsemer de ciboule',
+      'Servir'
     ],
     nutrition: {
       carbs: 6,
@@ -543,31 +542,31 @@ export const recipes: Recipe[] = [
       fat: 14,
       calories: 310,
       fiber: 2,
-      specialNutrients: ['Eisen', 'Kalzium', 'Antioxidantien']
+      specialNutrients: ['Fer', 'Calcium', 'Antioxydants']
     },
-    description: 'Ein würziges, veganes Frühstück'
+    description: 'Un petit-déjeuner vegan épicé'
   },
   {
     id: 'savory_04',
-    name: 'Ei-Muffins mit Gemüse',
+    name: 'Muffins aux œufs et légumes',
     type: 'savory',
     prepTime: 25,
     image: '/images/savory_04_eiermuffins.png',
     ingredients: [
-      { name: 'Eier', amount: '6' },
-      { name: 'Paprika (rot, gewürfelt)', amount: '1' },
-      { name: 'Zucchini (gewürfelt)', amount: '100g' },
-      { name: 'Käse (gerieben)', amount: '50g' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' },
-      { name: 'Kräuter (Thymian)', amount: '1 TL' }
+      { name: 'Œufs', amount: '6' },
+      { name: 'Poivron (rouge, en dés)', amount: '1' },
+      { name: 'Courgette (en dés)', amount: '100g' },
+      { name: 'Fromage râpé', amount: '50g' },
+      { name: 'Sel & poivre', amount: 'selon goût' },
+      { name: 'Herbes (thym)', amount: '1 c. à c.' }
     ],
     instructions: [
-      'Eier verquirlen',
-      'Gemüse und Käse hinzufügen',
-      'Mit Salz, Pfeffer und Thymian würzen',
-      'In Muffinformen gießen',
-      '20 Minuten bei 180°C backen',
-      'Abkühlen lassen und servieren'
+      'Battre les œufs',
+      'Ajouter les légumes et le fromage',
+      'Assaisonner avec sel, poivre et thym',
+      'Verser dans des moules à muffins',
+      'Cuire 20 minutes à 180°C',
+      'Laisser refroidir et servir'
     ],
     nutrition: {
       carbs: 6,
@@ -575,31 +574,31 @@ export const recipes: Recipe[] = [
       fat: 16,
       calories: 320,
       fiber: 1,
-      specialNutrients: ['Cholin', 'Selen', 'Vitamin B12']
+      specialNutrients: ['Choline', 'Sélénium', 'Vitamine B12']
     },
-    description: 'Praktische Ei-Muffins zum Mitnehmen'
+    description: 'Muffins aux œufs pratiques à emporter'
   },
   {
     id: 'savory_05',
-    name: 'Avocado-Toast mit Ei',
+    name: 'Toast à l’avocat et œuf',
     type: 'savory',
     prepTime: 10,
     image: '/images/savory_05_avocado_toast.png',
     ingredients: [
-      { name: 'Vollkornbrot', amount: '1 Scheibe' },
-      { name: 'Avocado', amount: '1/2' },
-      { name: 'Eier', amount: '2' },
-      { name: 'Chili-Flocken', amount: '1 Prise' },
-      { name: 'Zitronensaft', amount: '1 TL' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' }
+      { name: 'Pain complet', amount: '1 tranche' },
+      { name: 'Avocat', amount: '1/2' },
+      { name: 'Œufs', amount: '2' },
+      { name: 'Flocons de piment', amount: '1 pincée' },
+      { name: 'Jus de citron', amount: '1 c. à c.' },
+      { name: 'Sel & poivre', amount: 'selon goût' }
     ],
     instructions: [
-      'Brot toasten',
-      'Avocado zerdrücken und auf Toast verteilen',
-      'Mit Zitronensaft beträufeln',
-      'Eier braten (Spiegelei)',
-      'Eier auf Toast legen',
-      'Mit Chili-Flocken würzen'
+      'Griller le pain',
+      'Écraser l’avocat et l’étaler sur le toast',
+      'Arroser de jus de citron',
+      'Cuire les œufs (au plat)',
+      'Déposer les œufs sur le toast',
+      'Assaisonner avec les flocons de piment'
     ],
     nutrition: {
       carbs: 24,
@@ -607,31 +606,31 @@ export const recipes: Recipe[] = [
       fat: 18,
       calories: 400,
       fiber: 5,
-      specialNutrients: ['Kalium', 'Vitamin E', 'Folsäure']
+      specialNutrients: ['Potassium', 'Vitamine E', 'Acide folique']
     },
-    description: 'Ein klassisches, nahrhaftes Frühstück'
+    description: 'Un petit-déjeuner classique et nourrissant'
   },
   {
     id: 'savory_06',
-    name: 'Joghurt-Gurken-Dip',
+    name: 'Dip yaourt-concombre',
     type: 'savory',
     prepTime: 10,
     image: '/images/savory_06_joghurt_gurke.png',
     ingredients: [
-      { name: 'Griechischer Joghurt', amount: '200g' },
-      { name: 'Gurke (gerieben)', amount: '150g' },
-      { name: 'Dill (frisch)', amount: '2 EL' },
-      { name: 'Knoblauch (gehackt)', amount: '1 Zehe' },
-      { name: 'Zitronensaft', amount: '1 TL' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' }
+      { name: 'Yaourt grec', amount: '200g' },
+      { name: 'Concombre (râpé)', amount: '150g' },
+      { name: 'Aneth (frais)', amount: '2 c. à s.' },
+      { name: 'Ail (haché)', amount: '1 gousse' },
+      { name: 'Jus de citron', amount: '1 c. à c.' },
+      { name: 'Sel & poivre', amount: 'selon goût' }
     ],
     instructions: [
-      'Joghurt in eine Schüssel geben',
-      'Geriebene Gurke hinzufügen',
-      'Dill und Knoblauch einrühren',
-      'Mit Zitronensaft beträufeln',
-      'Mit Salz und Pfeffer würzen',
-      'Mit Gemüsesticks servieren'
+      'Mettre le yaourt dans un bol',
+      'Ajouter le concombre râpé',
+      'Incorporer l’aneth et l’ail',
+      'Arroser de jus de citron',
+      'Assaisonner avec sel et poivre',
+      'Servir avec des bâtonnets de légumes'
     ],
     nutrition: {
       carbs: 8,
@@ -639,31 +638,31 @@ export const recipes: Recipe[] = [
       fat: 6,
       calories: 240,
       fiber: 1,
-      specialNutrients: ['Probiotika', 'Kalzium', 'Vitamin K']
+      specialNutrients: ['Probiotiques', 'Calcium', 'Vitamine K']
     },
-    description: 'Ein erfrischender, leichter Dip'
+    description: 'Un dip rafraîchissant et léger'
   },
   {
     id: 'savory_07',
-    name: 'Geräucherter Tofu mit Senf',
+    name: 'Tofu fumé à la moutarde',
     type: 'savory',
     prepTime: 10,
     image: '/images/savory_07_raeuchertofu.png',
     ingredients: [
-      { name: 'Geräucherter Tofu', amount: '200g' },
-      { name: 'Vollkornbrot', amount: '2 Scheiben' },
-      { name: 'Senf (Dijon)', amount: '1 EL' },
-      { name: 'Salatgurke (geschnitten)', amount: '1/4' },
-      { name: 'Tomaten (geschnitten)', amount: '1' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' }
+      { name: 'Tofu fumé', amount: '200g' },
+      { name: 'Pain complet', amount: '2 tranches' },
+      { name: 'Moutarde (Dijon)', amount: '1 c. à s.' },
+      { name: 'Concombre (coupé)', amount: '1/4' },
+      { name: 'Tomates (coupées)', amount: '1' },
+      { name: 'Sel & poivre', amount: 'selon goût' }
     ],
     instructions: [
-      'Brot toasten',
-      'Senf auf das Brot streichen',
-      'Tofu in Scheiben schneiden',
-      'Tofu auf das Brot legen',
-      'Mit Gurke und Tomate belegen',
-      'Mit Salz und Pfeffer würzen'
+      'Griller le pain',
+      'Étaler la moutarde sur le pain',
+      'Couper le tofu en tranches',
+      'Déposer le tofu sur le pain',
+      'Garnir de concombre et tomate',
+      'Assaisonner avec sel et poivre'
     ],
     nutrition: {
       carbs: 28,
@@ -671,31 +670,31 @@ export const recipes: Recipe[] = [
       fat: 10,
       calories: 360,
       fiber: 4,
-      specialNutrients: ['Eisen', 'Kalzium', 'Vitamin B']
+      specialNutrients: ['Fer', 'Calcium', 'Vitamine B']
     },
-    description: 'Ein einfaches, schnelles Frühstück'
+    description: 'Un petit-déjeuner simple et rapide'
   },
   {
     id: 'savory_08',
-    name: 'Kichererbsen-Salat',
+    name: 'Salade de pois chiches',
     type: 'savory',
     prepTime: 10,
     image: '/images/savory_08_kichererbsen_salat.png',
     ingredients: [
-      { name: 'Kichererbsen (gekocht)', amount: '150g' },
-      { name: 'Sellerie (gehackt)', amount: '100g' },
-      { name: 'Rote Zwiebel (gehackt)', amount: '1/4' },
-      { name: 'Mayonnaise (light)', amount: '2 EL' },
-      { name: 'Dill (frisch)', amount: '1 EL' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' }
+      { name: 'Pois chiches (cuits)', amount: '150g' },
+      { name: 'Céleri (haché)', amount: '100g' },
+      { name: 'Oignon rouge (haché)', amount: '1/4' },
+      { name: 'Mayonnaise (allégée)', amount: '2 c. à s.' },
+      { name: 'Aneth (frais)', amount: '1 c. à s.' },
+      { name: 'Sel & poivre', amount: 'selon goût' }
     ],
     instructions: [
-      'Kichererbsen in eine Schüssel geben',
-      'Sellerie und Zwiebel hinzufügen',
-      'Mayonnaise einrühren',
-      'Dill hinzufügen',
-      'Mit Salz und Pfeffer würzen',
-      'Mit Vollkornbrot servieren'
+      'Mettre les pois chiches dans un bol',
+      'Ajouter le céleri et l’oignon',
+      'Incorporer la mayonnaise',
+      'Ajouter l’aneth',
+      'Assaisonner avec sel et poivre',
+      'Servir avec du pain complet'
     ],
     nutrition: {
       carbs: 24,
@@ -703,31 +702,31 @@ export const recipes: Recipe[] = [
       fat: 10,
       calories: 320,
       fiber: 6,
-      specialNutrients: ['Folsäure', 'Ballaststoffe', 'Eisen']
+      specialNutrients: ['Acide folique', 'Fibres', 'Fer']
     },
-    description: 'Ein proteinreicher Salat'
+    description: 'Une salade riche en protéines'
   },
   {
     id: 'savory_09',
-    name: 'Caprese-Salat',
+    name: 'Salade Caprese',
     type: 'savory',
     prepTime: 10,
     image: '/images/savory_09_mozzarella_tomate.png',
     ingredients: [
-      { name: 'Mozzarella (frisch)', amount: '150g' },
-      { name: 'Tomaten (geschnitten)', amount: '2 mittel' },
-      { name: 'Basilikum (frisch)', amount: '10 Blätter' },
-      { name: 'Pesto', amount: '2 EL' },
-      { name: 'Olivenöl', amount: '1 EL' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' }
+      { name: 'Mozzarella (fraîche)', amount: '150g' },
+      { name: 'Tomates (coupées)', amount: '2 moyennes' },
+      { name: 'Basilic (frais)', amount: '10 feuilles' },
+      { name: 'Pesto', amount: '2 c. à s.' },
+      { name: 'Huile d’olive', amount: '1 c. à s.' },
+      { name: 'Sel & poivre', amount: 'selon goût' }
     ],
     instructions: [
-      'Mozzarella und Tomaten in Scheiben schneiden',
-      'Alternierend auf einem Teller anrichten',
-      'Basilikum-Blätter darüber legen',
-      'Mit Pesto drizzeln',
-      'Mit Olivenöl beträufeln',
-      'Mit Salz und Pfeffer würzen'
+      'Couper mozzarella et tomates en tranches',
+      'Disposer en alternance dans une assiette',
+      'Déposer les feuilles de basilic dessus',
+      'Ajouter un filet de pesto',
+      'Arroser d’huile d’olive',
+      'Assaisonner avec sel et poivre'
     ],
     nutrition: {
       carbs: 8,
@@ -735,30 +734,30 @@ export const recipes: Recipe[] = [
       fat: 20,
       calories: 360,
       fiber: 2,
-      specialNutrients: ['Kalzium', 'Lycopin', 'Vitamin K']
+      specialNutrients: ['Calcium', 'Lycopène', 'Vitamine K']
     },
-    description: 'Ein klassischer, italienischer Salat'
+    description: 'Une salade italienne classique'
   },
   {
     id: 'savory_10',
-    name: 'Linsen-Dip mit Gemüse',
+    name: 'Dip de lentilles aux légumes',
     type: 'savory',
     prepTime: 15,
     image: '/images/savory_10_linsen_dip.png',
     ingredients: [
-      { name: 'Rote Linsen (gekocht)', amount: '150g' },
-      { name: 'Tahini', amount: '2 EL' },
-      { name: 'Zitronensaft', amount: '2 TL' },
-      { name: 'Knoblauch (gehackt)', amount: '1 Zehe' },
-      { name: 'Olivenöl', amount: '1 TL' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' }
+      { name: 'Lentilles rouges (cuites)', amount: '150g' },
+      { name: 'Tahini', amount: '2 c. à s.' },
+      { name: 'Jus de citron', amount: '2 c. à c.' },
+      { name: 'Ail (haché)', amount: '1 gousse' },
+      { name: 'Huile d’olive', amount: '1 c. à c.' },
+      { name: 'Sel & poivre', amount: 'selon goût' }
     ],
     instructions: [
-      'Linsen, Tahini, Zitronensaft und Knoblauch mischen',
-      'Mit Olivenöl drizzeln',
-      'Mit Salz und Pfeffer würzen',
-      'Mit Gemüsesticks servieren',
-      'Alternativ mit Vollkornbrot'
+      'Mélanger lentilles, tahini, jus de citron et ail',
+      'Ajouter un filet d’huile d’olive',
+      'Assaisonner avec sel et poivre',
+      'Servir avec des bâtonnets de légumes',
+      'Ou en alternative avec du pain complet'
     ],
     nutrition: {
       carbs: 20,
@@ -766,31 +765,31 @@ export const recipes: Recipe[] = [
       fat: 12,
       calories: 320,
       fiber: 6,
-      specialNutrients: ['Eisen', 'Folsäure', 'Ballaststoffe']
+      specialNutrients: ['Fer', 'Acide folique', 'Fibres']
     },
-    description: 'Ein proteinreicher, nahrhafter Dip'
+    description: 'Un dip riche en protéines et nourrissant'
   },
   {
     id: 'savory_11',
-    name: 'Shakshuka',
+    name: 'Chakchouka',
     type: 'savory',
     prepTime: 20,
     image: '/images/savory_11_shakshuka.png',
     ingredients: [
-      { name: 'Tomaten (gehackt)', amount: '400g' },
-      { name: 'Kichererbsen (gekocht)', amount: '100g' },
-      { name: 'Eier', amount: '3' },
-      { name: 'Spinat (frisch)', amount: '100g' },
-      { name: 'Paprika (Pulver)', amount: '1 TL' },
-      { name: 'Knoblauch (gehackt)', amount: '2 Zehen' }
+      { name: 'Tomates (hachées)', amount: '400g' },
+      { name: 'Pois chiches (cuits)', amount: '100g' },
+      { name: 'Œufs', amount: '3' },
+      { name: 'Épinards (frais)', amount: '100g' },
+      { name: 'Paprika (en poudre)', amount: '1 c. à c.' },
+      { name: 'Ail (haché)', amount: '2 gousses' }
     ],
     instructions: [
-      'Knoblauch in Olivenöl anbraten',
-      'Tomaten und Paprika hinzufügen',
-      'Kichererbsen und Spinat einrühren',
-      'Eier vorsichtig in die Sauce schlagen',
-      'Bis die Eier gar sind köcheln lassen',
-      'Mit Brot servieren'
+      'Faire revenir l’ail dans l’huile d’olive',
+      'Ajouter tomates et paprika',
+      'Incorporer pois chiches et épinards',
+      'Casser délicatement les œufs dans la sauce',
+      'Laisser mijoter jusqu’à cuisson des œufs',
+      'Servir avec du pain'
     ],
     nutrition: {
       carbs: 20,
@@ -798,31 +797,31 @@ export const recipes: Recipe[] = [
       fat: 14,
       calories: 360,
       fiber: 5,
-      specialNutrients: ['Lycopin', 'Eisen', 'Vitamin C']
+      specialNutrients: ['Lycopène', 'Fer', 'Vitamine C']
     },
-    description: 'Ein würziges, nahrhaftes Frühstück'
+    description: 'Un petit-déjeuner épicé et nourrissant'
   },
   {
     id: 'savory_12',
-    name: 'Pilz-Pfannkuchen mit Frischkäse',
+    name: 'Crêpes aux champignons et fromage frais',
     type: 'savory',
     prepTime: 20,
     image: '/images/savory_12_pfannkuchen_pilze.png',
     ingredients: [
-      { name: 'Kichererbsenmehl', amount: '100g' },
-      { name: 'Eier', amount: '2' },
-      { name: 'Wasser', amount: '100ml' },
-      { name: 'Pilze (geschnitten)', amount: '200g' },
-      { name: 'Frischkäse', amount: '50g' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' }
+      { name: 'Farine de pois chiches', amount: '100g' },
+      { name: 'Œufs', amount: '2' },
+      { name: 'Eau', amount: '100ml' },
+      { name: 'Champignons (coupés)', amount: '200g' },
+      { name: 'Fromage frais', amount: '50g' },
+      { name: 'Sel & poivre', amount: 'selon goût' }
     ],
     instructions: [
-      'Kichererbsenmehl, Eier und Wasser mischen',
-      'Teig ruhen lassen',
-      'Pilze anbraten',
-      'Pfannkuchen in einer Pfanne backen',
-      'Mit Frischkäse und Pilzen füllen',
-      'Falten und servieren'
+      'Mélanger farine de pois chiches, œufs et eau',
+      'Laisser reposer la pâte',
+      'Faire revenir les champignons',
+      'Cuire les crêpes dans une poêle',
+      'Garnir de fromage frais et champignons',
+      'Plier et servir'
     ],
     nutrition: {
       carbs: 18,
@@ -830,31 +829,31 @@ export const recipes: Recipe[] = [
       fat: 12,
       calories: 340,
       fiber: 4,
-      specialNutrients: ['Vitamin D', 'Kalzium', 'Ballaststoffe']
+      specialNutrients: ['Vitamine D', 'Calcium', 'Fibres']
     },
-    description: 'Ein herzhafter, würziger Pfannkuchen'
+    description: 'Une crêpe salée et savoureuse'
   },
   {
     id: 'savory_13',
-    name: 'Spinat-Feta-Muffins',
+    name: 'Muffins épinards-feta',
     type: 'savory',
     prepTime: 25,
     image: '/images/savory_13_spinat_muffins.png',
     ingredients: [
-      { name: 'Eier', amount: '6' },
-      { name: 'Spinat (gefroren)', amount: '150g' },
-      { name: 'Feta-Käse (gewürfelt)', amount: '80g' },
-      { name: 'Zwiebel (gehackt)', amount: '1/4' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' },
-      { name: 'Kräuter (Oregano)', amount: '1/2 TL' }
+      { name: 'Œufs', amount: '6' },
+      { name: 'Épinards (surgelés)', amount: '150g' },
+      { name: 'Feta (en dés)', amount: '80g' },
+      { name: 'Oignon (haché)', amount: '1/4' },
+      { name: 'Sel & poivre', amount: 'selon goût' },
+      { name: 'Herbes (origan)', amount: '1/2 c. à c.' }
     ],
     instructions: [
-      'Eier verquirlen',
-      'Spinat, Feta und Zwiebel hinzufügen',
-      'Mit Salz, Pfeffer und Oregano würzen',
-      'In Muffinformen gießen',
-      '20 Minuten bei 180°C backen',
-      'Abkühlen lassen'
+      'Battre les œufs',
+      'Ajouter épinards, feta et oignon',
+      'Assaisonner avec sel, poivre et origan',
+      'Verser dans des moules à muffins',
+      'Cuire 20 minutes à 180°C',
+      'Laisser refroidir'
     ],
     nutrition: {
       carbs: 6,
@@ -862,31 +861,31 @@ export const recipes: Recipe[] = [
       fat: 16,
       calories: 330,
       fiber: 2,
-      specialNutrients: ['Eisen', 'Kalzium', 'Vitamin K']
+      specialNutrients: ['Fer', 'Calcium', 'Vitamine K']
     },
-    description: 'Praktische, herzhafte Muffins'
+    description: 'Muffins salés pratiques'
   },
   {
     id: 'savory_14',
-    name: 'Zucchini-Puffer mit Kräuter-Quark',
+    name: 'Galettes de courgettes au fromage blanc aux herbes',
     type: 'savory',
     prepTime: 20,
     image: '/images/savory_14_zucchini_puffer.png',
     ingredients: [
-      { name: 'Zucchini (gerieben)', amount: '300g' },
-      { name: 'Eier', amount: '2' },
-      { name: 'Quark (20% Fett)', amount: '100g' },
-      { name: 'Kräuter (Dill, Petersilie)', amount: '2 EL' },
-      { name: 'Paniermehl', amount: '50g' },
-      { name: 'Salz & Pfeffer', amount: 'nach Geschmack' }
+      { name: 'Courgettes (râpées)', amount: '300g' },
+      { name: 'Œufs', amount: '2' },
+      { name: 'Fromage blanc (20% de matière grasse)', amount: '100g' },
+      { name: 'Herbes (aneth, persil)', amount: '2 c. à s.' },
+      { name: 'Chapelure', amount: '50g' },
+      { name: 'Sel & poivre', amount: 'selon goût' }
     ],
     instructions: [
-      'Zucchini auspressen',
-      'Mit Eiern und Paniermehl mischen',
-      'Mit Salz und Pfeffer würzen',
-      'Puffer in einer Pfanne braten',
-      'Quark mit Kräutern mischen',
-      'Puffer mit Kräuter-Quark servieren'
+      'Presser les courgettes',
+      'Mélanger avec œufs et chapelure',
+      'Assaisonner avec sel et poivre',
+      'Cuire les galettes dans une poêle',
+      'Mélanger fromage blanc et herbes',
+      'Servir les galettes avec le fromage blanc aux herbes'
     ],
     nutrition: {
       carbs: 12,
@@ -894,8 +893,8 @@ export const recipes: Recipe[] = [
       fat: 10,
       calories: 300,
       fiber: 2,
-      specialNutrients: ['Vitamin C', 'Kalzium', 'Vitamin K']
+      specialNutrients: ['Vitamine C', 'Calcium', 'Vitamine K']
     },
-    description: 'Knusprige Zucchini-Puffer mit cremigem Dip'
+    description: 'Galettes croustillantes de courgettes avec dip crémeux'
   }
 ];

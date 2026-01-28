@@ -1,5 +1,5 @@
 {
-  "name": "peribal-fruehstueck",
+  "name": "peribal-recettes-fr",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -98,6 +98,10 @@
     },
     "overrides": {
       "tailwindcss>nanoid": "3.3.7"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild"
+    ]
   }
 }

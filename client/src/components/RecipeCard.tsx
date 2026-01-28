@@ -58,7 +58,7 @@ export default function RecipeCard({
             {recipe.prepTime} Min
           </span>
           <span className="inline-block px-2 py-1 bg-muted rounded text-xs font-medium">
-            {recipe.type === 'sweet' ? '🍰 Süß' : '🥗 Herzhaft'}
+            {recipe.type === 'sweet' ? '🍰 Sucré' : '🥗 Salé'}
           </span>
         </div>
 
@@ -66,15 +66,15 @@ export default function RecipeCard({
         <div className="grid grid-cols-3 gap-2 text-xs">
           <div className="text-center p-2 bg-muted rounded">
             <div className="font-semibold text-primary">{recipe.nutrition.protein}g</div>
-            <div className="text-muted-foreground">Protein</div>
+            <div className="text-muted-foreground">Protéine</div>
           </div>
           <div className="text-center p-2 bg-muted rounded">
             <div className="font-semibold text-primary">{recipe.nutrition.carbs}g</div>
-            <div className="text-muted-foreground">KH</div>
+            <div className="text-muted-foreground">Gluc.</div>
           </div>
           <div className="text-center p-2 bg-muted rounded">
             <div className="font-semibold text-primary">{recipe.nutrition.fat}g</div>
-            <div className="text-muted-foreground">Fett</div>
+            <div className="text-muted-foreground">Graisse</div>
           </div>
         </div>
       </div>
