@@ -11,6 +11,7 @@ export default function Header() {
   const [location, setLocation] = useLocation();
   const isBreakfastPage = location === '/';
   const isBreadPage = location === '/bread';
+  const isDinnerPage = location === '/dinner';
 
   return (
     <>
@@ -24,7 +25,7 @@ export default function Header() {
                 PERIBAL
               </h1>
               <p className="text-xs text-muted-foreground">
-                {isBreakfastPage ? 'Frühstücksrezepte' : 'Brot & Backwaren'}
+                {isBreakfastPage ? 'Frühstücksrezepte' : isBreadPage ? 'Brot & Backwaren' : 'Dinner-Rezepte'}
               </p>
             </div>
           </div>
@@ -46,6 +47,13 @@ export default function Header() {
                 onClick={() => setLocation('/bread')}
               >
                 🍞 Brot & Backwaren
+              </Button>
+              <Button
+                variant={isDinnerPage ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setLocation('/dinner')}
+              >
+                🍽️ Dinner
               </Button>
             </div>
 
@@ -119,6 +127,17 @@ export default function Header() {
                 }}
               >
                 🍞 Brot
+              </Button>
+              <Button
+                variant={isDinnerPage ? 'default' : 'outline'}
+                size="sm"
+                className="flex-1"
+                onClick={() => {
+                  setLocation('/dinner');
+                  setIsMenuOpen(false);
+                }}
+              >
+                🍽️ Dinner
               </Button>
             </div>
             <Button
