@@ -95,7 +95,7 @@ export default function BreadFilterSidebar({
                 className="w-4 h-4 cursor-pointer accent-primary"
               />
               <Label htmlFor="cat-bread" className="cursor-pointer text-sm">
-                {t('bread.filter.bread')}
+                🍞 Brot
               </Label>
             </div>
             <div className="flex items-center gap-2">
@@ -109,7 +109,7 @@ export default function BreadFilterSidebar({
                 className="w-4 h-4 cursor-pointer accent-primary"
               />
               <Label htmlFor="cat-rolls" className="cursor-pointer text-sm">
-                {t('bread.filter.rolls')}
+                🥐 Brötchen
               </Label>
             </div>
             <div className="flex items-center gap-2">
@@ -123,7 +123,7 @@ export default function BreadFilterSidebar({
                 className="w-4 h-4 cursor-pointer accent-primary"
               />
               <Label htmlFor="cat-flatbread" className="cursor-pointer text-sm">
-                {t('bread.filter.flatbread')}
+                🫓 Fladenbrot
               </Label>
             </div>
             <div className="flex items-center gap-2">
@@ -137,7 +137,7 @@ export default function BreadFilterSidebar({
                 className="w-4 h-4 cursor-pointer accent-primary"
               />
               <Label htmlFor="cat-pancakes" className="cursor-pointer text-sm">
-                {t('bread.filter.pancakes')}
+                🥞 Pancakes
               </Label>
             </div>
           </div>
