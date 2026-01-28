@@ -1,37 +1,17 @@
 
 import { useState } from 'react';
-import { Menu, X, Download, ShoppingCart, Globe } from 'lucide-react';
+import { Menu, X, Download, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
-import { useTranslation } from 'react-i18next';
 import ShoppingListModal from './ShoppingListModal';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isShoppingListOpen, setIsShoppingListOpen] = useState(false);
   const [location, setLocation] = useLocation();
-  const { t, i18n } = useTranslation();
-  
   const isBreakfastPage = location === '/';
   const isBreadPage = location === '/bread';
   const isDinnerPage = location === '/dinner';
-
-  const languages = [
-    { code: 'de', name: 'Deutsch' },
-    { code: 'en', name: 'English' },
-    { code: 'fr', name: 'Français' },
-    { code: 'es', name: 'Español' },
-  ];
-
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
-
-  const getSubtitle = () => {
-    if (isBreakfastPage) return t('breakfast.subtitle');
-    if (isBreadPage) return t('bread.subtitle');
-    return t('dinner.subtitle');
-  };
 
   return (
     <>
@@ -45,7 +25,7 @@ export default function Header() {
                 PERIBAL
               </h1>
               <p className="text-xs text-muted-foreground">
-                {getSubtitle()}
+                {isBreakfastPage ? 'Frühstücksrezepte' : isBreadPage ? 'Brot & Backwaren' : 'Dinner-Rezepte'}
               </p>
             </div>
           </div>
@@ -59,37 +39,22 @@ export default function Header() {
                 size="sm"
                 onClick={() => setLocation('/')}
               >
-                {t('header.breakfast')}
+                🍳 Frühstück
               </Button>
               <Button
                 variant={isBreadPage ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setLocation('/bread')}
               >
-                {t('header.bread')}
+                🍞 Brot & Backwaren
               </Button>
               <Button
                 variant={isDinnerPage ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setLocation('/dinner')}
               >
-                {t('header.dinner')}
+                🍽️ Dinner
               </Button>
-            </div>
-
-            {/* Language Selector */}
-            <div className="flex gap-1 border-r border-border pr-4">
-              {languages.map((lang) => (
-                <Button
-                  key={lang.code}
-                  variant={i18n.language === lang.code ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => changeLanguage(lang.code)}
-                  className="text-xs"
-                >
-                  {lang.code.toUpperCase()}
-                </Button>
-              ))}
             </div>
 
             <Button
@@ -99,7 +64,7 @@ export default function Header() {
               className="gap-2"
             >
               <ShoppingCart className="h-4 w-4" />
-              {t('header.shoppingList')}
+              Einkaufsliste
             </Button>
             <a
               href="/peribal_suess_rezepte.pdf"
@@ -108,7 +73,7 @@ export default function Header() {
             >
               <Button variant="outline" size="sm" className="gap-2">
                 <Download className="h-4 w-4" />
-                {t('header.pdfSweet')}
+                PDF (Süß)
               </Button>
             </a>
             <a
@@ -118,7 +83,7 @@ export default function Header() {
             >
               <Button variant="outline" size="sm" className="gap-2">
                 <Download className="h-4 w-4" />
-                {t('header.pdfSavory')}
+                PDF (Herzhaft)
               </Button>
             </a>
           </div>
@@ -150,7 +115,7 @@ export default function Header() {
                   setIsMenuOpen(false);
                 }}
               >
-                {t('header.breakfast')}
+                🍳 Frühstück
               </Button>
               <Button
                 variant={isBreadPage ? 'default' : 'outline'}
@@ -161,7 +126,7 @@ export default function Header() {
                   setIsMenuOpen(false);
                 }}
               >
-                {t('header.bread')}
+                🍞 Brot
               </Button>
               <Button
                 variant={isDinnerPage ? 'default' : 'outline'}
@@ -172,33 +137,9 @@ export default function Header() {
                   setIsMenuOpen(false);
                 }}
               >
-                {t('header.dinner')}
+                🍽️ Dinner
               </Button>
             </div>
-
-            {/* Language Selector Mobile */}
-            <div className="mb-3 pb-3 border-b border-muted">
-              <p className="text-xs font-semibold text-muted-foreground mb-2">
-                <Globe className="inline w-3 h-3 mr-1" /> {t('filter.title')}
-              </p>
-              <div className="flex gap-1 flex-wrap">
-                {languages.map((lang) => (
-                  <Button
-                    key={lang.code}
-                    variant={i18n.language === lang.code ? 'default' : 'outline'}
-                    size="sm"
-                    onClick={() => {
-                      changeLanguage(lang.code);
-                      setIsMenuOpen(false);
-                    }}
-                    className="text-xs flex-1"
-                  >
-                    {lang.code.toUpperCase()}
-                  </Button>
-                ))}
-              </div>
-            </div>
-
             <Button
               variant="outline"
               className="w-full justify-start gap-2"
@@ -208,18 +149,18 @@ export default function Header() {
               }}
             >
               <ShoppingCart className="h-4 w-4" />
-              {t('header.shoppingList')}
+              Einkaufsliste
             </Button>
             <a href="/peribal_suess_rezepte.pdf" download className="block">
               <Button variant="outline" className="w-full justify-start gap-2">
                 <Download className="h-4 w-4" />
-                {t('header.pdfSweet')}
+                PDF (Süß)
               </Button>
             </a>
             <a href="/peribal_herzhaft_rezepte.pdf" download className="block">
               <Button variant="outline" className="w-full justify-start gap-2">
                 <Download className="h-4 w-4" />
-                {t('header.pdfSavory')}
+                PDF (Herzhaft)
               </Button>
             </a>
           </div>
