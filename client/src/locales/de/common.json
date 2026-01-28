@@ -43,13 +43,32 @@
     "noResults": "Keine Rezepte gefunden. Bitte passen Sie die Filter an."
   },
   "breakfast": {
-    "subtitle": "Frühstücksrezepte"
+    "subtitle": "Frühstücksrezepte",
+    "filter": {
+      "sweet": "🍰 Süßlich",
+      "savory": "🥘 Herzhaft"
+    }
   },
   "bread": {
-    "subtitle": "Brot & Backwaren"
+    "subtitle": "Brot & Backwaren",
+    "filter": {
+      "type": "Brot-Typ",
+      "bread": "🍞 Brot",
+      "rolls": "🥐 Brötchen",
+      "flatbread": "🫓 Fladenbrot",
+      "pancakes": "🥞 Pancakes"
+    }
   },
   "dinner": {
-    "subtitle": "Dinner-Rezepte"
+    "subtitle": "Dinner-Rezepte",
+    "filter": {
+      "proteinType": "Protein-Typ",
+      "animalProtein": "🥬 Tierisches Protein",
+      "plantProtein": "🌱 Pflanzliches Protein",
+      "temperature": "Temperatur",
+      "warm": "🔥 Warm",
+      "cold": "❄️ Kalt"
+    }
   },
   "shoppingList": {
     "title": "Einkaufsliste",
