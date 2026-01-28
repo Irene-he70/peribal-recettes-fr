@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -11,18 +11,19 @@ import Header from "./components/Header";
 
 
 function Router() {
+  const base = "/peribal-recettes-fr";
   return (
-    <>
+    <WouterRouter base={base}>
       <Header />
       <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/bread"} component={Bread} />
-        <Route path={"/dinner"} component={Dinner} />
-        <Route path={"/404"} component={NotFound} />
+        <Route path="/" component={Home} />
+        <Route path="/bread" component={Bread} />
+        <Route path="/dinner" component={Dinner} />
+        <Route path="/404" component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
       </Switch>
-    </>
+    </WouterRouter>
   );
 }
 
