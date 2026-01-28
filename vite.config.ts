@@ -158,6 +158,7 @@ const plugins = [
 ];
 
 export default defineConfig({
+  base: '/peribal-recettes-fr/',
   plugins,
   resolve: {
     alias: {
