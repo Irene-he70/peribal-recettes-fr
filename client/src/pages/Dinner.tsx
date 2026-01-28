@@ -1,10 +1,12 @@
 import { useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Heart, Clock, Flame, Leaf, Download, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { dinnerRecipes } from '@/data/dinner-recipes';
 
 export default function Dinner() {
+  const { t } = useTranslation();
   const [favorites, setFavorites] = useState<string[]>([]);
   const [selectedRecipe, setSelectedRecipe] = useState<any>(null);
   const [proteinFilter, setProteinFilter] = useState<'all' | 'animal' | 'plant'>('all');
@@ -30,7 +32,7 @@ export default function Dinner() {
 
   const addToShoppingList = (recipe: any) => {
     setShoppingList((prev) => [...prev, ...recipe.ingredients]);
-    alert(`${recipe.name} zur Einkaufsliste hinzugefügt!`);
+    alert(`${recipe.name} ${t('recipe.addToShoppingList')}`);
   };
 
   const downloadShoppingList = () => {
@@ -52,7 +54,7 @@ export default function Dinner() {
       <div className="container">
         {/* Filter Section */}
         <div className="mb-8 bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-bold text-[#2F5903] mb-6">Filter</h2>
+          <h2 className="text-2xl font-bold text-[#2F5903] mb-6">{t('filter.title')}</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Protein Type Filter */}
