@@ -771,7 +771,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'savory_11',
-    name: 'Chakchouka',
+    name: 'Shakshuka',
     type: 'savory',
     prepTime: 20,
     image: '/images/savory_11_shakshuka.png',
